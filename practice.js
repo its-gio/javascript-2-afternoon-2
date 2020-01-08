@@ -92,6 +92,10 @@ function evenFinder(nums) {
   return nums.filter((num) => num % 2 === 0 ? num : null);
 }
 
+function oddFinder(nums) {
+  return nums.filter((num) => num % 2 === 1 ? num : null);
+}
+
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -114,7 +118,14 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(numArr) {
+  let newNumArr = [];
+  newNumArr.push(evenFinder(numArr))
+  newNumArr.push(oddFinder(numArr))
+  return newNumArr;
+}
 
+divider(numbersArray);
 
 
 ////////// PROBLEM 7 //////////
