@@ -147,7 +147,17 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr) {
+  let randomNumber = getRandomArbitrary();
 
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (randomNumber === arr[i]) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -176,8 +186,21 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item) {
+  if (!myGroceryList || !item) return [];
+  if (myGroceryList.indexOf(item) !== -1) {
+    myGroceryList.splice(myGroceryList.indexOf(item), 1);
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item) {
+  if (!myGroceryList || !item) return [];
+  myGroceryList.push(item);
+  return myGroceryList
+}
 
+removeItem(myGroceryList, "chips")
 
 ////////// PROBLEM 9 //////////
 
@@ -186,7 +209,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function maker() {
+  let array = [];
 
+  for(let i = 1; i <= 215; i++) {
+    array.push(i);
+  }
+
+  return array;
+}
 
 
 ////////// PROBLEM 10 //////////
