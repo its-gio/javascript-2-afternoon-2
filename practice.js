@@ -233,7 +233,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(nums) {
+  let temp = []
+  nums.forEach(num => {
+    return temp.push(parseFloat(num) + 10)
+  });
+  return temp;
+}
 
+addTen(numbers)
 
 
 ////////// PROBLEM 11 //////////
@@ -258,7 +266,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  return arr1.length > arr2.length ? arr1 : arr2;
+}
 
 
 /*
@@ -270,7 +280,15 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both(arr1, arr2) {
+  let result = [];
 
+  arr2.forEach(num => {
+    arr1.includes(num) ? result.push(num) : null;
+  })
+
+  return result;
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -311,7 +329,7 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees.push(joe, cahlan, ryan, colt);
 
 
 /*
@@ -320,8 +338,7 @@ var colt = {
 */
 
 //Code Here
-
-
+devMountainEmployees.splice(1, 1);
 
 ////////// PROBLEM 13 //////////
 
@@ -332,7 +349,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = []
 
 
 /*
@@ -353,7 +370,21 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Le-a',
+  email: 'le.a@devmounta.in',
+  password: 'hunter3',
+  username: 'codeing?'
+};
 
+var user3 = {
+  name: 'McIver Mark',
+  email: 'mciver.mark@devmounta.in',
+  password: '2hunter',
+  username: 'codehazi'
+};
+
+users.push(user1, user2, user3);
 
 
 /*
@@ -367,9 +398,17 @@ var user1 = {
 */
 
 //Code Here
+function deleteUser(users) {
+  for(let i = 0; i <= users.length - 1; i++) {
+    if (users[i].email === "mark.mciver@devmounta.in") {
+      users.splice(i, 1);
+    }
+  }
 
+  return users;
+}
 
-
+deleteUser(users);
 /*
   The activity we just did is very much how data works in 'the real world'.
 */
